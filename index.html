@@ -3,55 +3,55 @@
   <head>
     <meta charset="utf-8">
         <title>Simple Javascript Iterator</title>
-    </head>
-    <body>
-        <div class="section">
-           1 2 3 4 5 6
-        </div>
-        <div class="section">
-           6 5 4 3 2 1
-        </div>
-	    <script src="js/Iterator.js" type = "text/javascript"></script>
-        <script type = "text/javascript">
-	        var sectionElements = document.getElementsByClassName("section");
-	        var firstSectionElementContent = sectionElements[0].innerHTML.trim();
-	        var arrOfNumbers = firstSectionElementContent.split(" ");
-        
-	        // demonstrates how the iterator works
-	        // iterates through numbers in array
-	        console.log("key-value");
-	        var it = Iterator(arrOfNumbers);
-	        while(it.hasNext()) {
-	            console.log(it.key() + "-" + it.current());
-	            it.next();
-	        }
-        
-	        // demonstrates the tag function 
-	        console.log('reset index');
-	        it.reset();
-	        console.log('current value ' + it.current());
-	        console.log('call it.tag()');
-	        var t = it.tag();
-	        console.log('call next');
-	        it.next();
-	        console.log('current value ' + it.current());
-	        console.log('tagged value ' + t());
-        
+  </head>
+  <body>
+    <div class="section">
+       1 2 3 4 5 6
+    </div>
+    <div class="section">
+       6 5 4 3 2 1
+    </div>
+    <script src="js/Iterator.js" type = "text/javascript"></script>
+       <script type = "text/javascript">
+        var sectionElements = document.getElementsByClassName("section");
+        var firstSectionElementContent = sectionElements[0].innerHTML.trim();
+        var arrOfNumbers = firstSectionElementContent.split(" ");
+       
+        // demonstrates how the iterator works
+        // iterates through numbers in array
+        console.log("key-value");
+        var it = Iterator(arrOfNumbers);
+        while(it.hasNext()) {
+            console.log(it.key() + "-" + it.current());
+            it.next();
+        }
+       
+        // demonstrates the tag function 
+        console.log('reset index');
+        it.reset();
+        console.log('current value ' + it.current());
+        console.log('call it.tag()');
+        var t = it.tag();
+        console.log('call next');
+        it.next();
+        console.log('current value ' + it.current());
+        console.log('tagged value ' + t());
+       
 
-	        // reversing array keeps current value same 
-	        // before and after
-	        console.log('reset index');
-	        it.reset();
-	        console.log('current value ' + it.current());
-	        console.log('call next');
-	        it.next();
-	        console.log('current value ' + it.current());
-	        console.log('reverse array')
-	        var t = it.reverse();
-	        console.log('current value ' + it.current());
-	        console.log('call next');
-	        it.next();
-	        console.log('current value ' + it.current());
-        </script>
-    </body>
+        // reversing array keeps current value same 
+        // before and after
+        console.log('reset index');
+        it.reset();
+        console.log('current value ' + it.current());
+        console.log('call next');
+        it.next();
+        console.log('current value ' + it.current());
+        console.log('reverse array')
+        var t = it.reverse();
+        console.log('current value ' + it.current());
+        console.log('call next');
+        it.next();
+        console.log('current value ' + it.current());
+    </script>
+  </body>
 </html>
