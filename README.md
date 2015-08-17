@@ -3,7 +3,7 @@ Instructions
 Please see JS folder for simple Javascript Iterator.
 
 The index.html file outputs to the console and does the following:
-- Shows the output of iterating through an array. The numbers in the array are the same numbers in the first div with class name, "section".
+- Iterates through an array. The numbers in the array are the same numbers in the first div with class name, "section".
 - Calls iterator.tag(). The tagged value is equal to the value in the array the iterator pointed to before the iterator.tag() function was called.
 - Calls iterator.reverse(). The value in the array that the iterator points to is the same before and after calling iterator.reverse()).
 
