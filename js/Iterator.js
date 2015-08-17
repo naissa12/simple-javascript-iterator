@@ -28,8 +28,8 @@ function Iterator(arr)
         spot and returns the new value.
         */
         next: function() {
-            if (this.hasNext()) {
-                index++;
+            index++;
+            if (this.hasNext()) {  
                 return arr[index];
             }
             return false;
